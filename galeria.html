@@ -16,6 +16,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
     crossorigin="anonymous">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
 
     <!--mi estilo css-->
     <link type="text/css" rel="stylesheet" href="css/estilo.css">
@@ -75,6 +77,84 @@
 
     <!-- Aquí va el contenido -->
 
+    <section class="gallery-block cards-gallery">
+	    <div class="container">
+	        <div class="heading naranjito">
+	          <h2>Galería de Fotos</h2>
+	        </div>
+	        <div class="row">
+	            <div class="col-md-6 col-lg-4">
+	                <div class="card border-0 transform-on-hover">
+	                	<a class="lightbox" href="img/cat1.jpg">
+	                		<img src="img/cat1.jpg" alt="Card Image" class="card-img-top">
+	                	</a>
+	                    <div class="card-body">
+	                        <h6><a href="#">Gatito</a></h6>
+	                        <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="col-md-6 col-lg-4">
+	                <div class="card border-0 transform-on-hover">
+						<a class="lightbox" href="img/birdo1.jpg">
+		                	<img src="img/birdo1.jpg" alt="Card Image" class="card-img-top">
+		                </a>
+	                    <div class="card-body">
+	                        <h6><a href="#">Pajarito</a></h6>
+	                        <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="col-md-6 col-lg-4">
+	                <div class="card border-0 transform-on-hover">
+	                	<a class="lightbox" href="img/erizo1.jpg">
+	                		<img src="img/erizo1.jpg" alt="Card Image" class="card-img-top">
+	                	</a>
+	                    <div class="card-body">
+	                        <h6><a href="#">Erizo</a></h6>
+	                        <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="col-md-6 col-lg-4">
+	                <div class="card border-0 transform-on-hover">
+	                	<a class="lightbox" href="img/huron1.jpg">
+	                		<img src="img/huron1.jpg" alt="Card Image" class="card-img-top">
+	                	</a>
+	                    <div class="card-body">
+	                        <h6><a href="#">Huron</a></h6>
+	                        <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="col-md-6 col-lg-4">
+	                <div class="card border-0 transform-on-hover">
+	                	<a class="lightbox" href="img/perrito1.jpg">
+	                		<img src="img/perrito1.jpg" alt="Card Image" class="card-img-top">
+	                	</a>
+	                    <div class="card-body">
+	                        <h6><a href="#">Perrito</a></h6>
+	                        <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="col-md-6 col-lg-4">
+	                <div class="card border-0 transform-on-hover">
+	                	<a class="lightbox" href="img/ratita1.jpg">
+	                		<img src="img/ratita1.jpg" alt="Card Image" class="card-img-top">
+	                	</a>
+	                    <div class="card-body">
+	                        <h6><a href="#">Squeeze squeezen</a></h6>
+	                        <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+    </section>
+
+
+
 
     <!-- Aquí termina el contenido -->
 
@@ -83,7 +163,7 @@
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
           <div class="col-md-4 d-flex align-items-center">
-            <a href="index.html" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">`
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">`
                 <!--Logo footer-->
                 <i class="fa-solid fa-paw naranjito"></i>
             </a>
@@ -115,11 +195,10 @@
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" 
     crossorigin="anonymous"></script>
 
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.cards-gallery', { animation: 'slideIn'});
+    </script>
 
   </body>
 </html>
-
-
-
-
