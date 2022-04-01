@@ -1,72 +1,83 @@
 .paddingderecho {
-    padding-right: 2%;
+  padding-right: 2%;
+  font-size: 50%;
 }
 
 .menufont {
 
-    font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', sans-serif;
 
 }
 
 .naranjito {
 
-    color: orange;
+  color: orange;
 }
 
 body { 
-    
-    background-color: rgb(241, 229, 215);
-
+background-color: rgb(241,229,215);
 }
 
 .letrasblancas {
 
-    color: white;
+  color: white;
 
 }
 
 .paddingsuperior {
-  padding-top: 7% ;
+padding-top: 7% ;
 
 }
 
 .btn-secondary {
 
-  background-color: rgb(245, 207, 137);
-  outline: none;
+background-color: rgb(245, 207, 137);
+outline: none;
 
 }
 
 .btn-primary {
 
-  background-color: rgb(245, 207, 137);
+background-color: rgb(245, 207, 137);
 
 }
 
 .btn-primary.focus, .btn-primary:focus {
-  -webkit-box-shadow: none!important;
-  box-shadow: none!important;
+-webkit-box-shadow: none!important;
+box-shadow: none!important;
 }
 
 .btn-secondary.focus, .btn-secondary:focus {
-  -webkit-box-shadow: none!important;
-  box-shadow: none!important;
+-webkit-box-shadow: none!important;
+box-shadow: none!important;
 }
 
- /* css de galeria de fotos  */ 
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
+/* css de galeria de fotos  */ 
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
 
- /* fin css de galeria de fotos */ 
+/* fin css de galeria de fotos */ 
+/*CARRUSEL*/
+.carousel{
+
+width: 65%;   
+border-style: outset;  
+}
+/*CARRUSEL*/
+.container{
+
+background-color: black;
+
+}
 
