@@ -35,28 +35,6 @@ padding-top: 7% ;
 
 }
 
-.btn-secondary {
-
-background-color: rgb(245, 207, 137);
-outline: none;
-
-}
-
-.btn-primary {
-
-background-color: rgb(245, 207, 137);
-
-}
-
-.btn-primary.focus, .btn-primary:focus {
--webkit-box-shadow: none!important;
-box-shadow: none!important;
-}
-
-.btn-secondary.focus, .btn-secondary:focus {
--webkit-box-shadow: none!important;
-box-shadow: none!important;
-}
 
 /* css de galeria de fotos  */ 
     .bd-placeholder-img {
