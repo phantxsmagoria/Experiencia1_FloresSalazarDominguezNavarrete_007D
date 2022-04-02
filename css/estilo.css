@@ -24,6 +24,12 @@ background-color: rgb(241,229,215);
 
 }
 
+.elementosjustificados {
+
+  padding: 10%;
+
+}
+
 .paddingsuperior {
 padding-top: 7% ;
 
@@ -68,6 +74,8 @@ box-shadow: none!important;
     }
 
 /* fin css de galeria de fotos */ 
+
+
 /*CARRUSEL*/
 .carousel{
 
