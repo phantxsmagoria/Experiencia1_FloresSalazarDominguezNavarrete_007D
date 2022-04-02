@@ -38,10 +38,12 @@ background-color: rgb(241,229,215);
   border-top-width: 10px;
 
 }
+
 .paddingsuperior {
 padding-top: 7% ;
 
 }
+
 
 
 /* css de galeria de fotos  */ 
@@ -87,3 +89,82 @@ padding-top: 7% ;
       padding-left: 10%;
       padding-right: 10%;
   }
+/*--CARRUSEL--*/
+
+/* Footer */
+
+.footer-basic {
+  padding:15px 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:12px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 1px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+a:hover{
+  text-decoration:none;
+  color: orange;
+
+} 
+a{
+  text-decoration:none;
+  color: black;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:5px;
+}
+
+.footer-basic .social > a {
+  font-size:20px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:5px;
+  text-align:center;
+  font-size:14px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+.footer-basic h1 {
+
+  font-size: 20pt;
+}
+
+.footer-basic .paddinginferior {
+
+  padding-bottom: 1%;
+}
+
+/* Footer */
