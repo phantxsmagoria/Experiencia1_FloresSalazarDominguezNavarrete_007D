@@ -14,8 +14,12 @@
   color: orange;
 }
 
-body { 
-background-color: rgb(241,229,215);
+body {
+
+  background-image: url(../img/fondo.png);
+
+
+  
 }
 
 .letrasblancas {
@@ -29,24 +33,21 @@ background-color: rgb(241,229,215);
   padding: 2%;
   background-color: rgb(248, 225, 217);
 }
-.elementosjustificados2 {
-  margin-top: 0%;
-  padding: 2%;
-  background-color: rgb(243, 208, 197);
-  border-top-style:solid;
-  border-top-color: rgb(246, 197, 217) ;
-  border-top-width: 10px;
 
-}
 
 .paddingsuperior {
 padding-top: 7% ;
 
 }
 
+.fondoblanco {
+  background-color: rgb(255, 255, 255);
+}
+
 
 
 /* css de galeria de fotos  */ 
+
     .bd-placeholder-img {
       font-size: 1.125rem;
       text-anchor: middle;
@@ -71,25 +72,12 @@ padding-top: 7% ;
   border-style: outset;  
   
   }
-  /*--CARRUSEL--*/
-  /*--Foto texto 1 & 2--*/
-  .fotoPerro1{
-      border-radius: 7%;
-      border-style: inset;
-  }
-  .fotoGato1{
-  
-    border-radius: 7%;
-    border-style: inset;
-  }
-  .textoGatoPerro{
-      font-size: 130%;
-      text-align: justify;
-      font-family: 'BIZ UDPMincho', serif;    
-      padding-left: 10%;
-      padding-right: 10%;
-  }
-/*--CARRUSEL--*/
+
+/* texto justificado.*/
+.justificado {
+  text-align: justify;
+
+}
 
 /* Footer */
 
@@ -168,3 +156,8 @@ a{
 }
 
 /* Footer */
+
+.paddingindexinferior {
+
+  padding-bottom: 10%;
+}
