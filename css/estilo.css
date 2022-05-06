@@ -1,3 +1,12 @@
+@font-face {
+  font-family: Rubik;
+  src: url('../fonts/Rubik-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: Rubik-medium;
+  src: url('../fonts/Rubik-Medium.ttf') format('truetype');
+}
+
 .paddingderecho {
   padding-right: 2%;
   font-size: 50%;
@@ -5,20 +14,21 @@
 
 .menufont {
 
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Rubik';
 
 }
 
 .naranjito {
-
   color: orange;
+}
+
+.blanquito {
+  color: whi;
 }
 
 body {
 
   background-image: url(../img/fondo.png);
-
-
   
 }
 
@@ -28,10 +38,53 @@ body {
 
 }
 
-.elementosjustificados {
-  margin-top: 10%;
-  padding: 2%;
-  background-color: rgb(248, 225, 217);
+/* change the background color */
+.navbar-custom {
+  background-color: orange;
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: white;
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+  color: white;
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+  color: black;
+}
+
+/* for dropdowns only */
+.navbar-custom .navbar-nav .dropdown-menu {
+  background-color: orange;
+}
+
+/* dropdown item text color */
+.navbar-custom .navbar-nav .dropdown-item {
+  color: white;
+}
+
+/* dropdown item hover or focus */
+.navbar-custom .navbar-nav .dropdown-item:hover,
+.navbar-custom .navbar-nav .dropdown-item:focus {
+  color: white;
+  background-color: orange;
+}
+
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  border-color: none;
+}
+
+button.navbar-toggle {
+  color: none;
 }
 
 
@@ -48,7 +101,7 @@ padding-top: 7% ;
 
 /* css de galeria de fotos  */ 
 .product-grid{
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Rubik' ;
   text-align: center;
 }
 .product-grid .product-image{
