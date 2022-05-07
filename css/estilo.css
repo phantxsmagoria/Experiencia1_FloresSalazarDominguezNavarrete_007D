@@ -23,16 +23,11 @@
 }
 
 
-
-
-
 .letrasblancas {
 
   color: white;
 
 }
-
-
 
 section {
   padding: 120px 0;
@@ -46,7 +41,6 @@ section {
   border-radius: 0;
   transition: all 0.2s ease;
 }
-
 
 .btn-primary {
   background-color: orange;
@@ -291,7 +285,7 @@ padding-top: 7% ;
 	width: 300px;
 }
 
-.result img {
+.result .img {
 	object-fit: cover;
 	height: 100%;
 	width: 100%;
@@ -301,10 +295,7 @@ padding-top: 7% ;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-button {
-	background-color: darksalmon;
+  background-color: darksalmon;
 	border: 0;
 	border-radius: 4px;
 	color: #fff;
@@ -314,11 +305,12 @@ button {
 	width: 300px;
 }
 
-button:active {
+
+.buttons:active {
 	transform: scale(0.98);
 }
 
-button:focus {
+.buttons:focus {
 	outline: none
 }
 
@@ -326,6 +318,7 @@ button:focus {
 
 
 /* texto justificado.*/
+
 .justificado {
   text-align: justify;
 
