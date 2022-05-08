@@ -23,11 +23,16 @@
 }
 
 
+
+
+
 .letrasblancas {
 
   color: white;
 
 }
+
+
 
 section {
   padding: 120px 0;
@@ -41,6 +46,7 @@ section {
   border-radius: 0;
   transition: all 0.2s ease;
 }
+
 
 .btn-primary {
   background-color: orange;
@@ -266,59 +272,10 @@ padding-top: 7% ;
 
 /* fin css de galeria de fotos */ 
 
-/* INICIO ESTILO DEL API PERRITO */ 
 
-
-.results {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.result {
-	background-color: #fff;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 10px;
-	height: 400px;
-	width: 300px;
-}
-
-.result .img {
-	object-fit: cover;
-	height: 100%;
-	width: 100%;
-}
-
-.buttons {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-  background-color: darksalmon;
-	border: 0;
-	border-radius: 4px;
-	color: #fff;
-	font-size: 18px;
-	padding: 10px;
-	margin: 10px;
-	width: 300px;
-}
-
-
-.buttons:active {
-	transform: scale(0.98);
-}
-
-.buttons:focus {
-	outline: none
-}
-
-/* FIN ESTILO DEL API PERRITO */ 
 
 
 /* texto justificado.*/
-
 .justificado {
   text-align: justify;
 
