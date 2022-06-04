@@ -104,6 +104,15 @@ section.pb {
   transition: all 0.2s ease;
 }
 
+/*INPUT VALIDO*/
+input:valid{
+  border-color: palegreen;
+
+}
+input:invalid{
+  border-color: palevioletred;
+  
+}
 
 .btn-primary {
   background-color: orange;
