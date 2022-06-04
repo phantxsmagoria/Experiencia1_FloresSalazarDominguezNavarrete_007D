@@ -105,12 +105,12 @@
         
               <div class="col-md-6">
                 <label for="firstName" class="form-label">Primer Nombre</label>
-                <input type="text" class="form-control" id="firstName" required>
+                <input type="text" class="form-control" id="firstName" minlength="5" maxlength="40" required pattern="[A-Za-z]+" required>
               </div>
         
               <div class="col-md-6">
                 <label for="lastName" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="lastName" required>
+                <input type="text" class="form-control" id="lastName" minlength="5" maxlength="40" required pattern="[A-Za-z]+" required>
               </div>
         
               <div class="col-md-8">
@@ -120,7 +120,7 @@
         
               <div class="col-md-4">
                 <label for="phoneNumber" class="form-label">Teléfono</label>
-                <input type="text" class="form-control" id="phoneNumber" placeholder="+(569) 54542878">
+                <input type="text" class="form-control" id="phoneNumber" placeholder="+(569) 54542878" pattern="\x2b[0-9]+" required>
               </div>
         
               <div class="col-md-12">
