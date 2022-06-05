@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 
+{% load static %}
 
 <html lang="en">
-  <head>
-    <!--metadatos-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--fuente google fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ramaraja&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Ramaraja&display=swap" rel="stylesheet">
+<head>
+  <!--metadatos-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
-    crossorigin="anonymous">
+  <!--fuente google fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ramaraja&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Ramaraja&display=swap" rel="stylesheet">
 
-    <!--mi estilo css-->
-    <link type="text/css" rel="stylesheet" href="css/estilo.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+  rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+  crossorigin="anonymous">
+
+  <!--mi estilo css-->
+  <link type="text/css" rel="stylesheet" href="{% static 'prueba3/css/estilo.css' %}">
     
-     <!--Favicon-->
-  <link rel="icon" href="img/huella.png">
+  <!--Favicon-->
+  <link rel="icon" href="{% static 'prueba3/img/huella.png' %}">
 
 
   <!-- iconos -->
-  <link href="./css/fontawesome.css" rel="stylesheet">
-  <link href="./css/brands.css" rel="stylesheet">
-  <link href="./css/solid.css" rel="stylesheet">
+  <link href="{% static 'prueba3/css/fontawesome.css' %}" rel="stylesheet">
+  <link href="{% static 'prueba3/css/brands.css' %}" rel="stylesheet">
+  <link href="{% static 'prueba3/css/solid.css' %}" rel="stylesheet">
 
   <title>Home - Jungle Crew</title>
 
@@ -82,6 +84,9 @@
           <li class="nav-item">
             <a class="nav-link" href="./formulario.html">Contacto</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./registrousuario.html">Registrate!</a>
+          </li>
         </ul>
       </div>
 
@@ -97,7 +102,7 @@
       <div class="container">
           <div class="row align-items-center gy-5">
               <div class="col-lg-5">
-                  <img class="img-fluid" src="./img/mision.jpg" alt="">
+                  <img class="img-fluid" src="{% static 'prueba3/img/mision.jpg' %}" alt="">
               </div>
               <div class="col-lg-5">
                   <h6><i width="30" height="25" class="fa-solid fa-paw d-inline-block align-text-top naranjito"></i>JUNGLE CREW</h6>

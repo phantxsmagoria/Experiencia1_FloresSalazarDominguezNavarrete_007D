@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+{% load static %}
 
 <html lang="en">
 
@@ -15,16 +16,16 @@
 
 
   <!--mi estilo css-->
-  <link type="text/css" rel="stylesheet" href="css/estilo.css">
+  <link type="text/css" rel="stylesheet" href="{% static 'prueba3/css/estilo.css' %}">
 
   <!--Favicon-->
-  <link rel="icon" href="img/huella.png">
+  <link rel="icon" href="{% static 'prueba3/img/huella.png' %}">
 
 
   <!-- iconos -->
-  <link href="./css/fontawesome.css" rel="stylesheet">
-  <link href="./css/brands.css" rel="stylesheet">
-  <link href="./css/solid.css" rel="stylesheet">
+  <link href="{% static 'prueba3/css/fontawesome.css' %}" rel="stylesheet">
+  <link href="{% static 'prueba3/css/brands.css'  %}" rel="stylesheet">
+  <link href="{% static 'prueba3/css/solid.css' %}" rel="stylesheet">
 
   <title>Formulario - Jungle Crew</title>
 
@@ -32,7 +33,7 @@
 
 <!--Comienzo body-->
 
-<body class="noscrollbar">
+<body>
 
   <!--nav bar-->
 
@@ -77,7 +78,10 @@
             <a class="nav-link" href="./adoptados.html">Perritos Adoptados</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disable" aria-current="page">Contacto</a>
+            <a class="nav-link" href="./formulario.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disable" aria-current="page">Registrate!</a>
           </li>
         </ul>
       </div>
@@ -90,7 +94,7 @@
 
   <!-- Aquí va el contenido -->
 
-<section id="about" class="pb">
+<section id="about">
   <div class="container">
       <div class="row align-items-center gy-5 img-fluid">
 
@@ -99,33 +103,115 @@
           </div>
 
           <div class="col-lg-5 offset-lg-1">
-            <h1>Contacto</h1>
+            <h1>REGISTRO USUARIO</h1>
           
             <form class="row g-3">
         
               <div class="col-md-6">
                 <label for="firstName" class="form-label">Primer Nombre</label>
-                <input type="text" class="form-control" id="firstName" required>
+                <input type="text" class="form-control" id="firstName" minlength="3" maxlength="40" required pattern="[A-Za-z]+" required>
               </div>
         
               <div class="col-md-6">
                 <label for="lastName" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="lastName" required>
-              </div>
-        
-              <div class="col-md-8">
-                <label for="emailInfo" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="emailInfo" required>
+                <input type="text" class="form-control" id="firstName" minlength="3" maxlength="40" required pattern="[A-Za-z]+" required>
               </div>
         
               <div class="col-md-4">
-                <label for="phoneNumber" class="form-label">Teléfono</label>
-                <input type="text" class="form-control" id="phoneNumber" placeholder="+(569) 54542878">
+                <label for="emailInfo" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="emailInfo" required>
               </div>
-        
-              <div class="col-md-12">
-                <label for="comments" class="form-label">Dudas & consultas: </label>
-                <textarea class="form-control" id="comments" rows="3" required></textarea>
+
+              <div class="col-md-4">
+                <label for="rut" class="form-label">Rut</label>
+                <input type="text" class="form-control" id="rut" name="rut" required oninput="checkRut(rut)" placeholder="Ingrese RUT">
+                <script src="{% static 'prueba3/js/validarRUT.js' %}"></script>
+              </div>
+
+              <div class="col-md-4">
+                <label for="phoneNumber" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="phoneNumber" placeholder="+(569) 54542878" pattern="\x2b[0-9]+" required>
+              </div>
+              <div class="col-md-4">
+                <label for="street-address" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="street-address" required>
+              </div>
+              <div class="col-md-4">
+                <label for="region" class="form-label">Región</label>
+                <input list="Regiones" class="form-control" id="region" required>
+                <datalist id="Regiones" >
+                  <option value="Arica y Parinacota">
+                  <option value="Tarapaca">
+                  <option value="Antofagasta">
+                  <option value="Atacama">
+                  <option value="Coquimbo">
+                  <option value="Valparaiso"> 
+                  <option value="Metropolitana">
+                  <option value="O´higgins">
+                  <option value="Maule">
+                  <option value="Ñuble">
+                  <option value="Bío Bío">
+                  <option value="Araucanía">      
+                  <option value="Los Rios">
+                  <option value="Los Lagos">
+                  <option value="Áysen">
+                  <option value="Magallanes">   
+                  </datalist>   
+              </div>
+              <div class="col-md-4">
+                <label for="Comuna" class="form-label">Comuna</label>
+                <input list="Comunas" class="form-control" id="Comuna" required>
+                <datalist id="Comunas" >
+                  <option value="Arica">
+                  <option value="Camarones">
+                  <option value="General Lagos">
+                  <option value="Putre">
+                  <option value="Alto Hospicio">
+                  <option value="Camiña"> 
+                  <option value="Colchane">
+                  <option value="Huara">
+                  <option value="Iquique">
+                  <option value="Pica">
+                  <option value="Pozo Almonte">
+                  <option value="Antofagasta">      
+                  <option value="Calama">
+                  <option value="Maria Elena">
+                  <option value="Mejillones">
+                  <option value="Ollague">
+                  <option value="San Pedro de Atacama">
+                  <option value="Sierra Gorda">
+                  <option value="Taltal">
+                  <option value="Tocopilla">
+                  <option value="Alto del Carmen">
+                  <option value="Caldera">
+                  <option value="Chañaral">
+                  <option value="Copiapó">
+                  <option value="Diego de Almagro">
+                  <option value="Freirina">
+                  <option value="Huasco">
+                  <option value="Tierra Amarilla">
+                  <option value="Vallenar">
+                  <option value="Andacollo">
+                  <option value="Canela">
+                  <option value="Combarbalá">
+                  <option value="Coquimbo">
+                  <option value="Illapel">
+                  <option value="La Higuera">
+                  <option value="La Serena">
+                  <option value="Los Vilos">
+                  <option value="Monte Patria">
+                  <option value="Ovalle">
+                  <option value="Paihuano">
+                  <option value="Punitaqui">
+                  <option value="Rio Hurtado">
+                  <option value="Salamanca">
+                  <option value="Vicuña">
+                  <option value="Algarrobo">
+                  <option value="Cabildo">                    
+                  <option value="Calera">
+                  <option value="Calle Larga">
+                  <option value="Cartagena">
+                  </datalist>
               </div>
         
               <div class="col-md-12">
