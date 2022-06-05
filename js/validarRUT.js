@@ -31,7 +31,7 @@ function checkRut(rut) {
         if(multiplo < 7) { multiplo = multiplo + 1; } else { multiplo = 2; }
   
     }
-    
+    20668381-3
     // Calcular Dígito Verificador en base al Módulo 11
     dvEsperado = 11 - (suma % 11);
     
