@@ -111,7 +111,7 @@ input:valid{
 }
 input:invalid{
   border-color: palevioletred;
-
+  
 }
 
 .btn-primary {
