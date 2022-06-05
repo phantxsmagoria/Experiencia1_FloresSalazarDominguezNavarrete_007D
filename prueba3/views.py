@@ -24,3 +24,6 @@ def galeria(request):
 
 def registrousuario(request):
     return render(request, 'prueba3/registrousuario.html')
+
+def consultadatos(request):
+    return render(request, 'prueba3/consultadatos.html')

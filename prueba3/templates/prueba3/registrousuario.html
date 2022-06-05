@@ -83,6 +83,9 @@
           <li class="nav-item">
             <a class="nav-link disable" aria-current="page">Registrate!</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./consultadatos.html" >Inicia sesión</a>
+          </li>
         </ul>
       </div>
 
@@ -99,7 +102,7 @@
       <div class="row align-items-center gy-5 img-fluid">
 
           <div class="col-lg-5">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.6140927783563!2d-70.75462978413154!3d-33.5114161080312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662dcd1fe0c7bab%3A0x4d17b82a7ba77488!2sDuoc%20UC%3A%20Sede%20Maipu!5e0!3m2!1ses!2scl!4v1651943731650!5m2!1ses!2scl" width="460" height="640" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <img class="img-fluid" src="{% static 'prueba3/img/quienessomos.jpg' %}" alt="">
           </div>
 
           <div class="col-lg-5 offset-lg-1">
@@ -107,12 +110,12 @@
           
             <form class="row g-3">
         
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <label for="firstName" class="form-label">Primer Nombre</label>
                 <input type="text" class="form-control" id="firstName" minlength="3" maxlength="40" required pattern="[A-Za-z]+" required>
               </div>
         
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <label for="lastName" class="form-label">Apellido</label>
                 <input type="text" class="form-control" id="firstName" minlength="3" maxlength="40" required pattern="[A-Za-z]+" required>
               </div>
@@ -120,6 +123,11 @@
               <div class="col-md-4">
                 <label for="emailInfo" class="form-label">E-mail</label>
                 <input type="email" class="form-control" id="emailInfo" required>
+              </div>
+
+              <div class="col-md-4">
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1"  required>
               </div>
 
               <div class="col-md-4">

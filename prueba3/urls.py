@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, vision, mision, quienessomos, formulario, adoptados, galeria, registrousuario
+from .views import index, vision, mision, quienessomos, formulario, adoptados, galeria, registrousuario, consultadatos
 
 urlpatterns = [
     path('',index,name="index"),
@@ -11,4 +11,5 @@ urlpatterns = [
     path('adoptados.html',adoptados,name="adoptados"),
     path('galeria.html',galeria,name="galeria"),
     path('registrousuario.html',registrousuario,name="registrousuario"),
+    path('consultadatos.html',consultadatos,name="consultadatos"),
 ]
