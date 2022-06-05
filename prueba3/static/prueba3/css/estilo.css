@@ -111,11 +111,7 @@ input:valid{
 }
 input:invalid{
   border-color: palevioletred;
-<<<<<<<< HEAD:prueba3/static/prueba3/css/estilo.css
 
-========
-  
->>>>>>>> 2c0321ed09221bd48060283f3d66301ad552e0ef:TestDjango/core/Templates/core/css/estilo.css
 }
 
 .btn-primary {
