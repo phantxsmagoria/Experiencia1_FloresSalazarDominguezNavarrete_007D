@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Usuario
+from .forms import UsuarioForm
 
 def index(request):
     return render(request, 'prueba3/index.html')
@@ -23,7 +25,20 @@ def galeria(request):
     return render(request, 'prueba3/galeria.html')
 
 def registrousuario(request):
-    return render(request, 'prueba3/registrousuario.html')
+    datos = {'form': UsuarioForm()}
+    if request.method== 'POST': 
+        formulario = UsuarioForm(request.POST)
+        if formulario.is_valid:
+            formulario.save()
+            datos['mensaje'] = "Guardado Correctamente"
+    
+    return render(request, 'prueba3/registrousuario.html',datos)
+    
 
 def consultadatos(request):
     return render(request, 'prueba3/consultadatos.html')
+
+def mostrardatos(request):
+    usuario = Usuario.objects.all()
+    datos = {'usuario': usuario}
+    return render(request, 'prueba3/mostrardatos.html', datos)

@@ -107,46 +107,48 @@
 
           <div class="col-lg-5 offset-lg-1">
             <h1>REGISTRO USUARIO</h1>
-          
-            <form class="row g-3">
-        
-              <div class="col-md-4">
+
+            {% block content %}
+            <form class="row g-3" method="post" action="" id="formulario">
+            {% csrf_token %}
+              <div class="col-md-4 form-group">
+            
                 <label for="firstName" class="form-label">Primer Nombre</label>
-                <input type="text" class="form-control" id="firstName" minlength="3" maxlength="40" required pattern="[A-Za-z]+" required>
+                <input type="text" class="form-control" id="firstName" minlength="3" maxlength="40" required pattern="[A-Za-z]+" required name="{{form.pnombre.name}}">
               </div>
         
               <div class="col-md-4">
                 <label for="lastName" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="firstName" minlength="3" maxlength="40" required pattern="[A-Za-z]+" required>
+                <input type="text" class="form-control" id="firstName" minlength="3" maxlength="40" required pattern="[A-Za-z]+" required name="{{form.apellido.name}}">
               </div>
         
               <div class="col-md-4">
                 <label for="emailInfo" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="emailInfo" required>
+                <input type="email" class="form-control" id="emailInfo" required name="{{form.email.name}}">
               </div>
 
               <div class="col-md-4">
                 <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="exampleInputPassword1"  required>
+                <input type="password" class="form-control" id="exampleInputPassword1"  required name="{{form.contraseña.name}}">
               </div>
 
               <div class="col-md-4">
                 <label for="rut" class="form-label">Rut</label>
-                <input type="text" class="form-control" id="rut" name="rut" required oninput="checkRut(rut)" placeholder="Ingrese RUT">
+                <input type="text" class="form-control" id="rut" name="rut" required oninput="checkRut(rut)" placeholder="Ingrese RUT" name="{{form.rut.name}}">
                 <script src="{% static 'prueba3/js/validarRUT.js' %}"></script>
               </div>
 
               <div class="col-md-4">
                 <label for="phoneNumber" class="form-label">Teléfono</label>
-                <input type="text" class="form-control" id="phoneNumber" placeholder="+(569) 54542878" pattern="\x2b[0-9]+" required>
+                <input type="text" class="form-control" id="phoneNumber" placeholder="+(569) 54542878" pattern="\x2b[0-9]+" required name="{{form.telefono.name}}">
               </div>
               <div class="col-md-4">
                 <label for="street-address" class="form-label">Dirección</label>
-                <input type="text" class="form-control" id="street-address" required>
+                <input type="text" class="form-control" id="street-address" placeholder="Calle #N°casa/dpto" required name="{{form.Direccion.name}}">
               </div>
               <div class="col-md-4">
                 <label for="region" class="form-label">Región</label>
-                <input list="Regiones" class="form-control" id="region" required>
+                <input list="Regiones" class="form-control" id="region"  required name="{{form.region.name}}">
                 <datalist id="Regiones" >
                   <option value="Arica y Parinacota">
                   <option value="Tarapaca">
@@ -168,7 +170,7 @@
               </div>
               <div class="col-md-4">
                 <label for="Comuna" class="form-label">Comuna</label>
-                <input list="Comunas" class="form-control" id="Comuna" required>
+                <input list="Comunas" class="form-control" id="Comuna" required name="{{form.comuna.name}}">
                 <datalist id="Comunas" >
                   <option value="Arica">
                   <option value="Camarones">
@@ -223,11 +225,14 @@
               </div>
         
               <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" value="create">Submit</button>
                 <button type="reset" class="btn btn-primary">Limpiar</button>
               </div>
-        
+              <div class="alert alert-success" role="alert">
+                {{mensaje}}
+              </div>
             </form>
+            {% endblock %}
           </div>
       </div>
   </div>
