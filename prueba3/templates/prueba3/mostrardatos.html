@@ -81,10 +81,10 @@
             <a class="nav-link" href="./formulario.html">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./registrousuario.html">Registrate!</a>
+            <a class="nav-link" href="./registrousuario.html">Registratre</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disable" aria-current="page" >Inicia sesión</a>
+            <a class="nav-link disable" >Usuario</a>
           </li>
         </ul>
       </div>
@@ -97,20 +97,44 @@
 
   <!-- Aquí va el contenido -->
 
-<section id="about">
+<section id="about blanquito">
   <div class="container">
       <div class="row align-items-center gy-5 img-fluid">
-
-          <div class="col-lg-5">
-            <img class="img-fluid" src="{% static 'prueba3/img/vision.jpg' %}" alt="">
-          </div>
           <div class="row">
-          <table border=1>
-            <tr><td>rut</td><td>Primer Nombre</td><td>Apellido</td><td>E-mail</td><td>pass</td><td>Teléfono</td><td>Dirección</td><td>Región</td><td>Comuna</td> </tr>
-            {% for us in usuario %}
-            <tr><td>{{us.rut}}</td><td>{{us.pnombre}}</td><td>{{us.apellido}}</td><td>{{us.email}}</td><td>{{us.contraseña}}</td><td>{{us.telefono}}</td><td>{{us.Direccion}}</td><td>{{us.region}}</td><td>{{us.comuna}}</td></tr>
-            {% endfor %}
-          </table>
+            <table class="table">
+
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">RUT</th>
+                  <th scope="col">NOMBRE</th>
+                  <th scope="col">APELLIDO</th>
+                  <th scope="col">EMAIL</th>
+                  <th scope="col">CONTRASEÑA</th>
+                  <th scope="col">TELÉFONO</th>
+                  <th scope="col">DIRECCIÓN</th>
+                  <th scope="col">REGIÓN</th>
+                  <th scope="col">COMUNA</th>
+                </tr>
+              </thead>
+    
+              {% for us in usuario %}
+              <tbody>
+                <tr>
+                  <th scope="row">{{us.rut}}</th>
+                  <td>{{us.pnombre}}</td>
+                  <td>{{us.apellido}}</td>
+                  <td>{{us.email}}</td>
+                  <td>{{us.contraseña}}</td>
+                  <td>{{us.telefono}}</td>
+                  <td>{{us.Direccion}}</td>
+                  <td>{{us.region}}</td>
+                  <td>{{us.comuna}}</td>
+                  <td><button type="submit" class="btn btn-primary">Editar</button></td>
+                  <td><button type="reset" class="btn btn-primary">Guardar</button></td>
+                </tr>
+              </tbody>
+              {% endfor %}
+            </table>
           </div>       
       </div>
   </div>
