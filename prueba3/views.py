@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Usuario
-from .forms import UsuarioForm
+from .models import Usuario, Contacto
+from .forms import UsuarioForm, ContactoForm
 
 def index(request):
     return render(request, 'prueba3/index.html')
@@ -16,7 +16,13 @@ def quienessomos(request):
     return render(request, 'prueba3/quienessomos.html')
 
 def formulario(request):
-    return render(request, 'prueba3/formulario.html')
+    datos = {'form':ContactoForm()}
+    if request.method== 'POST': 
+        formulario = ContactoForm(request.POST)
+        if formulario.is_valid:
+            formulario.save()
+            datos['mensaje'] = "Guardado Correctamente"
+    return render(request, 'prueba3/formulario.html',datos)
 
 def adoptados(request):
     return render(request, 'prueba3/adoptados.html')

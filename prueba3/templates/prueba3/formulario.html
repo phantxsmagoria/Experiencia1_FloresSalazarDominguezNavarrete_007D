@@ -107,40 +107,49 @@
 
           <div class="col-lg-5 offset-lg-1">
             <h1>Contacto</h1>
-          
-            <form class="row g-3">
-        
+            {% block content %}
+            <form class="row g-3" method="post" action="" id="formulario">
+              {% csrf_token %}
+              <div class="col-md-4">
+                <label for="rut" class="form-label">Rut</label>
+                <input type="text" class="form-control" id="rut" name="rut" required oninput="checkRut(rut)" placeholder="Ingrese RUT" name="{{form.rut.name}}">
+                <script src="{% static 'prueba3/js/validarRUT.js' %}"></script>
+              </div>
+
               <div class="col-md-6">
                 <label for="firstName" class="form-label">Primer Nombre</label>
-                <input type="text" class="form-control" id="firstName" minlength="3" maxlength="40" required pattern="[A-Za-z]+" required>
+                <input type="text" class="form-control" id="firstName" minlength="3" maxlength="40" required pattern="[A-Za-z]+" required name="{{form.pnombre.name}}">
               </div>
         
               <div class="col-md-6">
                 <label for="lastName" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="lastName" minlength="3" maxlength="40" required pattern="[A-Za-z]+" required>
+                <input type="text" class="form-control" id="lastName" minlength="3" maxlength="40" required pattern="[A-Za-z]+" required name="{{form.apellido.name}}">
               </div>
         
               <div class="col-md-8">
                 <label for="emailInfo" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="emailInfo" required>
+                <input type="email" class="form-control" id="emailInfo" required name="{{form.email.name}}">
               </div>
         
               <div class="col-md-4">
                 <label for="phoneNumber" class="form-label">Teléfono</label>
-                <input type="text" class="form-control" id="phoneNumber" placeholder="+(569) 54542878" pattern="\x2b[0-9]+" required>
+                <input type="text" class="form-control" id="phoneNumber" placeholder="+(569) 54542878" pattern="\x2b[0-9]+" required name="{{form.telefono.name}}">
               </div>
         
               <div class="col-md-12">
                 <label for="comments" class="form-label">Dudas & consultas: </label>
-                <textarea class="form-control" id="comments" rows="3" required></textarea>
+                <textarea class="form-control" id="comments" rows="3" required name="{{form.dudas.name}}"></textarea>
               </div>
         
               <div class="col-md-12">
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <button type="reset" class="btn btn-primary">Limpiar</button>
               </div>
-        
+              <div class="alert alert-success" role="alert">
+                {{mensaje}}
+              </div>
             </form>
+            {% endblock %}
           </div>
       </div>
   </div>
