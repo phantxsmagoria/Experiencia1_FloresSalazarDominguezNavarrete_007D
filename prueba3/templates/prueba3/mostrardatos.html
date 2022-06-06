@@ -84,7 +84,7 @@
             <a class="nav-link" href="./registrousuario.html">Registratre</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disable" >Usuario</a>
+            <a class="nav-link disable" >Usuarios</a>
           </li>
         </ul>
       </div>
@@ -114,6 +114,7 @@
                   <th scope="col">DIRECCIÓN</th>
                   <th scope="col">REGIÓN</th>
                   <th scope="col">COMUNA</th>
+                  <th scope="col">OPCIONES</th>
                 </tr>
               </thead>
     
@@ -129,12 +130,13 @@
                   <td>{{us.Direccion}}</td>
                   <td>{{us.region}}</td>
                   <td>{{us.comuna}}</td>
-                  <td><button type="submit" class="btn btn-primary">Editar</button></td>
-                  <td><button type="reset" class="btn btn-primary">Guardar</button></td>
-                </tr>
+                  <td><a type="submit" class="btn btn-primary" href="{% url 'mod_registrousuario' us.rut %}">Modificar</a></td>
+                  <td><a type="submit" class="btn btn-primary" href="{% url 'del_registrousuario' us.rut %}">Eliminar</a></td>
+               </tr>
               </tbody>
               {% endfor %}
             </table>
+            <a type="submit" class="btn btn-primary" href="{% url 'registrousuario' %}">Registrar nuevo usuario</a>
           </div>       
       </div>
   </div>

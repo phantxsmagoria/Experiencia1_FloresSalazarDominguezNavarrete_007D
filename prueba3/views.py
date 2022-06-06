@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Usuario, Contacto
 from .forms import UsuarioForm, ContactoForm
 
@@ -41,10 +41,22 @@ def registrousuario(request):
     return render(request, 'prueba3/registrousuario.html',datos)
     
 
-def consultadatos(request):
-    return render(request, 'prueba3/consultadatos.html')
+def mod_registrousuario(request,id):
+    usuario = Usuario.objects.get(rut=id)
+    datos = {'form':UsuarioForm(instance=usuario)}
+    if request.method== 'POST':
+        formulario= UsuarioForm(data=request.POST,instance=usuario)
+        if formulario.is_valid:
+            formulario.save()
+            datos['mensaje'] = "Modificación Exitosa"
+    return render(request, 'prueba3/mod_registrousuario.html',datos)
 
 def mostrardatos(request):
     usuario = Usuario.objects.all()
     datos = {'usuario': usuario}
     return render(request, 'prueba3/mostrardatos.html', datos)
+
+def del_registrousuario(request,id):
+    usuario = Usuario.objects.get(rut=id)
+    usuario.delete()
+    return redirect(to="index")
